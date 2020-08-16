@@ -6,7 +6,11 @@ import styles from '../styles/header.module.css'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Home', page: '/' },
-  { label: 'About', link: 'https://www.notion.so/kyungpyokim/Portfolio-2721d5363c7a4951b03e87b8c4788d93' },
+  {
+    label: 'About',
+    link:
+      'https://www.notion.so/kyungpyokim/Portfolio-2721d5363c7a4951b03e87b8c4788d93',
+  },
   { label: 'Posts', page: '/blog' },
   { label: 'Github', link: 'https://github.com/Kyungpyo-Kim' },
 ]
@@ -17,7 +21,7 @@ export default ({ titlePre = '' }) => {
   return (
     <header className={styles.header}>
       <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} My Notion Blog</title>
+        <title>{titlePre ? `${titlePre} |` : ''} Kyungpyo-Kim</title>
         <meta
           name="description"
           content="Kyungpyo's blog powered by Notion and Vercel"

@@ -420,8 +420,6 @@ const RenderPost = ({ post, redirect, preview }) => {
           console.log(components.ul)
           return toRender
         })}
-      </div>
-      <div>
         <DiscussionEmbed
           shortname="kyungpyo-kim"
           config={{

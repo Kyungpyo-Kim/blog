@@ -12,6 +12,7 @@ import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+import { DiscussionEmbed } from 'disqus-react'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -418,6 +419,21 @@ const RenderPost = ({ post, redirect, preview }) => {
           }
           return toRender
         })}
+      </div>
+      <div>
+        {window.location.href}
+        {/* {this.props.location.pathname} */}
+        {/* <DiscussionEmbed
+            shortname='example'
+            config={
+                {
+                    // url: window.location.href,
+                    identifier: post.id,
+                    title: post.Page,
+                    language: 'zh_TW' //e.g. for Traditional Chinese (Taiwan)	
+                }
+            }
+        /> */}
       </div>
     </>
   )

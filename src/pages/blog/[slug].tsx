@@ -417,23 +417,20 @@ const RenderPost = ({ post, redirect, preview }) => {
               }
               break
           }
+          console.log(components.ul)
           return toRender
         })}
       </div>
       <div>
-        {window.location.href}
-        {/* {this.props.location.pathname} */}
-        {/* <DiscussionEmbed
-            shortname='example'
-            config={
-                {
-                    // url: window.location.href,
-                    identifier: post.id,
-                    title: post.Page,
-                    language: 'zh_TW' //e.g. for Traditional Chinese (Taiwan)	
-                }
-            }
-        /> */}
+        <DiscussionEmbed
+          shortname="kyungpyo-kim"
+          config={{
+            // url: window.location.href,
+            identifier: post.id,
+            title: post.Page,
+            language: 'ko', //e.g. for Traditional Chinese (Taiwan)
+          }}
+        />
       </div>
     </>
   )

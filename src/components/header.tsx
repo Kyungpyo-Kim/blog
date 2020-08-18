@@ -27,6 +27,10 @@ export default ({ titlePre = '' }) => {
           content="Kyungpyo's blog powered by Notion and Vercel"
         />
         <meta name="og:title" content="Kyungpyo's Blog" />
+        <meta
+          name="google-site-verification"
+          content="tfc9jpowYc8aJg6nks4TA5rXycQYN_oPQzGPp0Pg0HA"
+        />
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (

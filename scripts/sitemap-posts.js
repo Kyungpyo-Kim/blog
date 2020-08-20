@@ -4,7 +4,7 @@ const prettier = require('prettier')
 
 const getDate = new Date().toISOString()
 
-const fetchUrl = 'https://jsonplaceholder.typicode.com/posts'
+const fetchUrl = 'https://kyungpyo.vercel.app/blog'
 const YOUR_AWESOME_DOMAIN = 'https://kyungpyo.vercel.app'
 
 const formatted = sitemap => prettier.format(sitemap, { parser: 'html' })

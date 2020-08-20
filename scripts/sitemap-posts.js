@@ -15,7 +15,7 @@ const formatted = sitemap => prettier.format(sitemap, { parser: 'html' })
     .catch(err => console.log(err))
 
   const postList = []
-  fetchPosts.forEach(post => postList.push(post.id))
+  fetchPosts.forEach(post => postList.push(post.Page))
 
   const postListSitemap = `
     ${postList

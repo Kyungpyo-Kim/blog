@@ -58,7 +58,7 @@ module.exports = {
       return entries
     }
     if (isServer) {
-      require('./scripts/generate-sitemap')
+      require('./scripts/sitemap-common')
       // require('./scripts/sitemap-posts')
       // require('./scripts/compress')
       // require('./scripts/sitemap')

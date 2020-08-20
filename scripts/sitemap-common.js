@@ -48,5 +48,5 @@ const formatted = sitemap => prettier.format(sitemap, { parser: 'html' })
 
   const formattedSitemap = [formatted(generatedSitemap)]
 
-  fs.writeFileSync('../public/sitemap-common.xml', formattedSitemap, 'utf8')
+  fs.writeFileSync('../public/sitemap.xml', formattedSitemap, 'utf8')
 })()

@@ -4,7 +4,7 @@ const prettier = require('prettier')
 
 const getDate = new Date().toISOString()
 
-const webrootDomain = 'https://website.com'
+const webrootDomain = 'https://kyungpyo.vercel.app/'
 
 const formatted = sitemap => prettier.format(sitemap, { parser: 'html' })
 

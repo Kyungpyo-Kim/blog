@@ -57,6 +57,13 @@ module.exports = {
       entries['./scripts/build-rss.js'] = './src/lib/build-rss.ts'
       return entries
     }
+    if (isServer) {
+      require('./scripts/sitemap-common')
+      require('./scripts/sitemap-posts')
+      require('./scripts/compress')
+      require('./scripts/sitemap')
+      require('./scripts/robots')
+    }
     return cfg
   },
 }

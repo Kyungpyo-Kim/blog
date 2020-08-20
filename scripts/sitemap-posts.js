@@ -15,14 +15,14 @@ const formatted = sitemap => prettier.format(sitemap, { parser: 'html' })
     .catch(err => console.log(err))
 
   const postList = []
-  fetchPosts.forEach(post => postList.push(post.Page))
+  fetchPosts.forEach(post => postList.push(post.title))
 
   const postListSitemap = `
     ${postList
-      .map(Page => {
+      .map(title => {
         return `
           <url>
-            <loc>${`${YOUR_AWESOME_DOMAIN}/blog/${Page}`}</loc>
+            <loc>${`${YOUR_AWESOME_DOMAIN}/blog/${title}`}</loc>
             <lastmod>${getDate}</lastmod>
           </url>`
       })

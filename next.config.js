@@ -60,7 +60,7 @@ module.exports = {
     if (isServer) {
       require('./scripts/sitemap-common')
       require('./scripts/sitemap-posts')
-      require('./scripts/compress')
+      // require('./scripts/compress')
       require('./scripts/sitemap')
       require('./scripts/robots')
     }

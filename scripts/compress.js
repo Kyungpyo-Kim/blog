@@ -1,7 +1,7 @@
 const fs = require('fs')
 const zlib = require('zlib')
 
-var dirs = ['../public/sitemap']
+var dirs = ['public/sitemap']
 
 dirs.forEach(dir => {
   fs.readdirSync(dir).forEach(file => {

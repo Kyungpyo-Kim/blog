@@ -5,4 +5,4 @@ const generatedSitemap = `
 User-agent: *
 Disallow: /[MY_ADMIN_PAGE_DIR]*/
 `
-fs.writeFileSync('../public/robots.txt', generatedSitemap, 'utf8')
+fs.writeFileSync('public/robots.txt', generatedSitemap, 'utf8')

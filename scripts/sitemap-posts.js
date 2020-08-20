@@ -1,36 +1,30 @@
 const fs = require('fs')
-const globby = require('globby')
+const fetch = require('node-fetch')
 const prettier = require('prettier')
 
 const getDate = new Date().toISOString()
 
-const YOUR_AWESOME_DOMAIN = 'https://kyungpyo.vercel.app/'
+const fetchUrl = 'https://jsonplaceholder.typicode.com/posts'
+const YOUR_AWESOME_DOMAIN = 'https://website.com'
 
 const formatted = sitemap => prettier.format(sitemap, { parser: 'html' })
 
 ;(async () => {
-  const pages = await globby([
-    // include
-    '../pages/**/*.tsx',
-    '../pages/*.tsx',
-    // exclude
-    '!../pages/_*.tsx',
-  ])
+  const fetchPosts = await fetch(fetchUrl)
+    .then(res => res.json())
+    .catch(err => console.log(err))
 
-  const pagesSitemap = `
-    ${pages
-      .map(page => {
-        const path = page
-          .replace('../pages/', '')
-          .replace('.tsx', '')
-          .replace(/\/index/g, '')
-        const routePath = path === 'index' ? '' : path
+  const postList = []
+  fetchPosts.forEach(post => postList.push(post.id))
+
+  const postListSitemap = `
+    ${postList
+      .map(id => {
         return `
           <url>
-            <loc>${YOUR_AWESOME_DOMAIN}/${routePath}</loc>
+            <loc>${`${YOUR_AWESOME_DOMAIN}/post/${id}`}</loc>
             <lastmod>${getDate}</lastmod>
-          </url>
-        `
+          </url>`
       })
       .join('')}
   `
@@ -42,11 +36,11 @@ const formatted = sitemap => prettier.format(sitemap, { parser: 'html' })
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
     >
-      ${pagesSitemap}
+      ${postListSitemap}
     </urlset>
   `
 
   const formattedSitemap = [formatted(generatedSitemap)]
 
-  fs.writeFileSync('public/sitemap-common.xml', formattedSitemap, 'utf8')
+  fs.writeFileSync('public/sitemap-posts.xml', formattedSitemap, 'utf8')
 })()

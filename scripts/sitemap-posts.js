@@ -5,7 +5,7 @@ const prettier = require('prettier')
 const getDate = new Date().toISOString()
 
 const fetchUrl = 'https://jsonplaceholder.typicode.com/posts'
-const YOUR_AWESOME_DOMAIN = 'https://kyungpyo.vercel.app/'
+const YOUR_AWESOME_DOMAIN = 'https://kyungpyo.vercel.app'
 
 const formatted = sitemap => prettier.format(sitemap, { parser: 'html' })
 
@@ -19,10 +19,10 @@ const formatted = sitemap => prettier.format(sitemap, { parser: 'html' })
 
   const postListSitemap = `
     ${postList
-      .map(id => {
+      .map(Page => {
         return `
           <url>
-            <loc>${`${YOUR_AWESOME_DOMAIN}/post/${id}`}</loc>
+            <loc>${`${YOUR_AWESOME_DOMAIN}/blog/${Page}`}</loc>
             <lastmod>${getDate}</lastmod>
           </url>`
       })

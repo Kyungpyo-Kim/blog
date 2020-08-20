@@ -61,8 +61,8 @@ module.exports = {
       require('./scripts/sitemap-common')
       require('./scripts/sitemap-posts')
       // require('./scripts/compress')
-      require('./scripts/sitemap')
-      require('./scripts/robots')
+      // require('./scripts/sitemap')
+      // require('./scripts/robots')
     }
     return cfg
   },

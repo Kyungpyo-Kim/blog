@@ -74,7 +74,7 @@ url = "mailto:kyungpyo94@gmail.com"
   [[menu.main]]
   name = "Study"
   weight = 300
-  identifier = "Study"
+  identifier = "study"
   url = "/study/"
 
   [[menu.main]]

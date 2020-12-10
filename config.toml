@@ -22,7 +22,7 @@ keywords = ""
 favicon = "favicons/"
 customCss = []
 customJs = []
-mainSections = ["post"]
+mainSections = ["life", "study"]
 images = ["images/site-feature-image.png"]
 doNotLoadAnimations = false
 # Google Site Verification
@@ -66,13 +66,19 @@ url = "mailto:kyungpyo94@gmail.com"
   url = "/"
 
   [[menu.main]]
-  name = "Posts"
+  name = "Life"
   weight = 200
-  identifier = "posts"
-  url = "/post/"
+  identifier = "life"
+  url = "/life/"
+
+  [[menu.main]]
+  name = "Study"
+  weight = 300
+  identifier = "Study"
+  url = "/study/"
 
   [[menu.main]]
   name = "About"
-  weight = 300
+  weight = 400
   identifier = "about"
   url = "/about/"

@@ -1,0 +1,78 @@
+baseURL = "https://example.com"
+languageCode = "en"
+DefaultContentLanguage = "en"
+title = "Website of Kyungpyo Kim"
+theme = "anatole"
+summarylength = 10
+enableEmoji = true
+enableRobotsTXT = true
+
+# Enable Disqus
+disqusShortname = "kyungpyokim"
+
+# Google Analytics
+googleAnalytics = "UA-150383923-1"
+
+[params]
+title = "Kyungpyo Kim"
+author = "kyungpyo-kim"
+description = "새로운 것을 찾아"
+profilePicture = "images/kyungpyo.jpeg"
+keywords = ""
+favicon = "favicons/"
+customCss = []
+customJs = []
+mainSections = ["post"]
+images = ["images/site-feature-image.png"]
+doNotLoadAnimations = false
+# Google Site Verification
+googleSiteVerify = "LOq04nTRWtf6KOjNzm_vAFYbz0fmzh0MIFnxxqX6r"
+
+## Math settings
+[params.math]
+enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
+
+## Social links
+# use 'fab' when brand icons, use 'fas' when standard solid icons.
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/kyungpyo-kim-b0b13618a/"
+
+[[params.socialIcons]]
+icon = "fab fa-github"
+title = "GitHub"
+url = "https://github.com/Kyungpyo-Kim"
+
+[[params.socialIcons]]
+icon = "fab fa-instagram"
+title = "instagram"
+url = "https://instagram.com/kyung_py"
+
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:kyungpyo94@gmail.com"
+
+## Menu items
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Posts"
+  weight = 200
+  identifier = "posts"
+  url = "/post/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 300
+  identifier = "about"
+  url = "/about/"

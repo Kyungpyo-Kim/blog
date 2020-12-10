@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "/"
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Website of Kyungpyo Kim"
@@ -19,7 +19,7 @@ author = "kyungpyo-kim"
 description = "새로운 것을 찾아"
 profilePicture = "images/kyungpyo.jpeg"
 keywords = ""
-favicon = "favicons/"
+favicon = "favicons"
 customCss = []
 customJs = []
 mainSections = ["life", "study"]

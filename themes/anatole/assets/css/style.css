@@ -995,6 +995,11 @@ print {
     }
 }
 
+/* ---------- */
+/* Custom CSS */
+/* ---------- */
+
+/* Optimization at mobile view */
 li {
     overflow: hidden;
     word-break: break-all;
@@ -1002,4 +1007,7 @@ li {
 a {
     overflow: hidden;
     word-break: break-all;
+}
+ul {
+    padding-inline-start: 20px;
 }

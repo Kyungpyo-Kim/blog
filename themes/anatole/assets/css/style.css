@@ -519,7 +519,7 @@ a:active {
 }
 
 #disqus_thread {
-    margin: 30px;
+    margin: 1vw;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -993,4 +993,13 @@ print {
         padding-left: 15%;
         width: 25%;
     }
+}
+
+li {
+    overflow: hidden;
+    word-break: break-all;
+}
+a {
+    overflow: hidden;
+    word-break: break-all;
 }

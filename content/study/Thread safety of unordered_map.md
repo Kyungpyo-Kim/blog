@@ -17,7 +17,7 @@ tags:
 
 `unordered_map` 을 사용한 멀티 스레드 프로그래밍을 하던 중 잘못된 메모리 접근으로 인한 문제로 인해 프로그램이 죽는 상황에 직면했다. 기본적으로 STL Container 는 하나의 스레드에 의한 쓰기 접근을 허용하고 다중 스레드에 의한 읽기 접근을 허용하기 때문에 `unordered_map`의 데이터를 업데이트 하는 부분에 `mutex`를 적용하여 문제를 해결하려 시도 했다. 보통은 이렇게 해결이 되지만 `unordered_map` 에서는 조금 다른 문제가 엮여 있었다.
 
-![Thread safety of unordered_map.png](Thread safety of unordered_map.png)
+![Thread safety of unordered_map.png](/images/Thread safety of unordered_map.png)
 
 위의 그림과 같이 Thread 1과 Thread 2가 unordered_map 이라는 데이터를 사용한다. 이때 Thread 1은 `unordered_map` 의 데이터를 읽기 위해 key 를 이용해 key 1에 해당하는 데이터가 있는지 확인하고 데이터를 얻는다.
 
